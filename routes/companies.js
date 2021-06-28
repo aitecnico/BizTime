@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
     return res.json(results.rows)
 })
 
-// Code Search Route
+// Code Search Route don't use to prevent (SQL Injection attack)
 router.get('/search', async (req, res, next) => {
     try {
         const { code } = req.query;
